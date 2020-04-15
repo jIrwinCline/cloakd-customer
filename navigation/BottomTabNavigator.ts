@@ -1,12 +1,15 @@
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
-import {
-  BusinessProfileTabScreen,
-  FindCompanyTabScreen,
-  RequestOfficerTabScreen,
-} from "../screens";
+// import {
+//   BusinessProfileTabScreen,
+//   FindCompanyTabScreen,
+//   RequestOfficerTabScreen,
+// } from "../screens";
+import FindCompanyTabScreen from "../screens/FindCompanyTabScreen.tsx";
 
-export const BottomTabNavigator = createMaterialBottomTabNavigator({
+const BottomTabNavigator = createMaterialBottomTabNavigator({
   find: FindCompanyTabScreen,
-  request: RequestOfficerTabScreen,
-  business: BusinessProfileTabScreen,
+  //   request: RequestOfficerTabScreen,
+  //   business: BusinessProfileTabScreen,
 });
+
+export default BottomTabNavigator;
