@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
-const RequestOfficerTabScreen = () => {
+const RequestOfficerTabScreen: React.SFC<IAppProps> = () => {
   return (
     <View>
       <Text></Text>
@@ -10,3 +10,5 @@ const RequestOfficerTabScreen = () => {
 };
 
 export default RequestOfficerTabScreen;
+
+const styles = StyleSheet.create({});
