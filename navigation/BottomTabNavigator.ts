@@ -8,6 +8,9 @@ import FindCompanyTabScreen from "../screens/FindCompanyTabScreen.tsx";
 import RequestOfficerTabScreen from "../screens/RequestOfficerTabScreen.tsx";
 import BusinessProfileTabScreen from "../screens/BusinessProfileTabScreen.tsx";
 
+import Icon from "react-native-vector-icons/Ionicons";
+import Colors from "../constants/Colors.js";
+
 const BottomTabNavigator = createMaterialBottomTabNavigator(
   {
     find: FindCompanyTabScreen,
@@ -16,9 +19,9 @@ const BottomTabNavigator = createMaterialBottomTabNavigator(
   },
   {
     initialRouteName: "request",
-    activeColor: "#f0edf6",
+    activeColor: Colors.main,
     inactiveColor: "#226557",
-    barStyle: { backgroundColor: "#3BAD87" },
+    barStyle: { backgroundColor: "#F6F6F6" },
   }
 );
 
