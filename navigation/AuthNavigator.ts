@@ -1,6 +1,10 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
+import AuthScreen from "../screens/AuthScreen.tsx";
+import RegisterScreen from "../screens/RegisterScreen.tsx";
+import LoginScreen from "../screens/LoginScreen.tsx";
+
 const AuthStack = createStackNavigator(
   {
     Start: AuthScreen,
