@@ -11,12 +11,12 @@ import BottomTabNavigator from "./BottomTabNavigator";
 
 const MainNavigator = createSwitchNavigator(
   {
-    // Auth: AuthStack,
+    Auth: AuthStack,
     Tabs: BottomTabNavigator,
     // Message: MessageStack,
   },
   {
-    initialRouteName: "Tabs",
+    initialRouteName: "Auth",
   }
   // {
   //   defaultNavigationOptions: {
