@@ -1,4 +1,5 @@
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
+import { Platform } from "react-native";
 // import {
 //   BusinessProfileTabScreen,
 //   FindCompanyTabScreen,
@@ -24,5 +25,12 @@ const BottomTabNavigator = createMaterialBottomTabNavigator(
     barStyle: { backgroundColor: "#F6F6F6" },
   }
 );
+
+// find.navigationOptions = ({ navigation }) => ({
+//   tabBarLabel: "Find",
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon focused={focused} name={"md-home"} />
+//   ),
+// });
 
 export default BottomTabNavigator;
