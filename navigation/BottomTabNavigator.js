@@ -21,6 +21,15 @@ const FindCompanyStackNavigator = createStackNavigator({
     screen: FindCompanyTabScreen,
   },
 });
+const FindCompanyNavigationOptions = {
+  tabBarLabel: "Home",
+  tabBarIcon: ({ tintColor }) => (
+    <View>
+      <Ionicons style={[{ color: tintColor }]} size={25} name={"ios-home"} />
+    </View>
+  ),
+};
+
 // FindCompanyStackNavigator.navigationOptions = ({ navigation }) => ({
 //   tabBarLabel: "Find",
 //   tabBarIcon: ({ focused }) => (
@@ -39,18 +48,7 @@ const BottomTabNavigator = createMaterialBottomTabNavigator(
   {
     FindStack: {
       screen: FindCompanyStackNavigator,
-      navigationOptions: {
-        tabBarLabel: "Home",
-        tabBarIcon: ({ tintColor }) => (
-          <View>
-            <Ionicons
-              style={[{ color: tintColor }]}
-              size={25}
-              name={"ios-home"}
-            />
-          </View>
-        ),
-      },
+      navigationOptions: FindCompanyNavigationOptions,
     },
     RequestOfficerTabScreen,
     BusinessProfileTabScreen,
