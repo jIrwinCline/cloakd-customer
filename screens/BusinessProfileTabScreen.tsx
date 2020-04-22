@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 const BusinessProfileTabScreen = (props) => {
   return (
     <View>
-      <Text></Text>
+      <Text>BusinessProfileTabScreen</Text>
     </View>
   );
 };
