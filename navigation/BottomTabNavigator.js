@@ -12,17 +12,17 @@ import FindCompanyTabScreen from "../screens/FindCompanyTabScreen.tsx";
 import RequestOfficerTabScreen from "../screens/RequestOfficerTabScreen.tsx";
 import BusinessProfileTabScreen from "../screens/BusinessProfileTabScreen.tsx";
 
-// import Ionicons from "react-native-vector-icons/Ionicons";
 import TabBarIcon from "../components/TabBarIcon";
 import Colors from "../constants/Colors.js";
 
-const FindCompanyStackNavigator = createStackNavigator({
+//Find Company Stack
+const FindCompanyStack = createStackNavigator({
   Find: {
     screen: FindCompanyTabScreen,
   },
 });
 const FindCompanyNavigationOptions = {
-  tabBarLabel: "Home",
+  tabBarLabel: "Find",
   tabBarIcon: ({ tintColor }) => (
     <View>
       <Ionicons style={[{ color: tintColor }]} size={25} name={"ios-home"} />
@@ -30,42 +30,38 @@ const FindCompanyNavigationOptions = {
   ),
 };
 
-// FindCompanyStackNavigator.navigationOptions = ({ navigation }) => ({
-//   tabBarLabel: "Find",
-//   tabBarIcon: ({ focused }) => (
-//     <TabBarIcon
-//       focused={focused}
-//       name={
-//         Platform.OS === "ios"
-//           ? `ios-home${focused ? "" : "-outline"}`
-//           : "md-home"
-//       }
-//     />
-//   ),
-// });
-
+//Request Officer Stack
+const RequestOfficerStack = createStackNavigator({
+  Request: {
+    screen: RequestOfficerTabScreen,
+  },
+});
+const RequestOfficerNavigationOptions = {
+  tabBarLabel: "Request",
+  tabBarIcon: ({ tintColor }) => (
+    <View>
+      <Ionicons style={[{ color: tintColor }]} size={25} name={"ios-home"} />
+    </View>
+  ),
+};
 const BottomTabNavigator = createMaterialBottomTabNavigator(
   {
     FindStack: {
-      screen: FindCompanyStackNavigator,
+      screen: FindCompanyStack,
       navigationOptions: FindCompanyNavigationOptions,
     },
-    RequestOfficerTabScreen,
+    RequestStack: {
+      screen: RequestOfficerStack,
+      navigationOptions: RequestOfficerNavigationOptions,
+    },
     BusinessProfileTabScreen,
   },
   {
-    initialRouteName: "RequestOfficerTabScreen",
+    initialRouteName: "RequestStack",
     activeColor: Colors.main,
     inactiveColor: "#226557",
     barStyle: { backgroundColor: "#F6F6F6" },
   }
 );
-
-// find.navigationOptions = ({ navigation }) => ({
-//   tabBarLabel: "Find",
-//   tabBarIcon: ({ focused }) => (
-//     <TabBarIcon focused={focused} name={"md-home"} />
-//   ),
-// });
 
 export default BottomTabNavigator;
