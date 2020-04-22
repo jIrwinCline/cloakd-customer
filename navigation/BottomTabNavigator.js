@@ -44,6 +44,23 @@ const RequestOfficerNavigationOptions = {
     </View>
   ),
 };
+
+// Business Profile Stack
+const BusinessProfileStack = createStackNavigator({
+  Business: {
+    screen: BusinessProfileTabScreen,
+  },
+});
+const BusinessProfileNavigationOptions = {
+  tabBarLabel: "Business",
+  tabBarIcon: ({ tintColor }) => (
+    <View>
+      <Ionicons style={[{ color: tintColor }]} size={25} name={"ios-home"} />
+    </View>
+  ),
+};
+
+//Bottom Tabs
 const BottomTabNavigator = createMaterialBottomTabNavigator(
   {
     FindStack: {
@@ -54,7 +71,10 @@ const BottomTabNavigator = createMaterialBottomTabNavigator(
       screen: RequestOfficerStack,
       navigationOptions: RequestOfficerNavigationOptions,
     },
-    BusinessProfileTabScreen,
+    BusinessStack: {
+      screen: BusinessProfileStack,
+      navigationOptions: BusinessProfileNavigationOptions,
+    },
   },
   {
     initialRouteName: "RequestStack",
