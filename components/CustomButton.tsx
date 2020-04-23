@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
-import Colors from "../constants/colors";
+import Colors from "../constants/Colors";
 
 export interface CustomButtonProps {
   title?: string;

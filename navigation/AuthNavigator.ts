@@ -5,7 +5,7 @@ import AuthScreen from "../screens/AuthScreen.tsx";
 import RegisterScreen from "../screens/RegisterScreen.tsx";
 import LoginScreen from "../screens/LoginScreen.tsx";
 
-const AuthStack = createStackNavigator(
+const AuthNavigator = createStackNavigator(
   {
     Start: AuthScreen,
     Register: RegisterScreen,
@@ -24,4 +24,4 @@ const AuthStack = createStackNavigator(
   //   }
   // }
 );
-export default AuthStack;
+export default AuthNavigator;
