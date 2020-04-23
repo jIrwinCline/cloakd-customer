@@ -13,7 +13,7 @@ export interface CustomButtonProps {
 const CustomButton: React.SFC<CustomButtonProps> = (props) => {
   const { title = "Enter", style = {}, textStyle = {}, onPress } = props;
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={onPress} style={[styles.button, style]}>
       <Text style={[styles.text, textStyle]}>{props.title}</Text>
     </TouchableOpacity>
   );
