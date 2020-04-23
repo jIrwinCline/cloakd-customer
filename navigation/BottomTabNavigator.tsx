@@ -79,7 +79,7 @@ const BottomTabNavigator = createMaterialBottomTabNavigator(
   {
     initialRouteName: "RequestStack",
     activeColor: Colors.main,
-    inactiveColor: "#226557",
+    inactiveColor: "#757575",
     barStyle: { backgroundColor: "#F6F6F6" },
   }
 );
