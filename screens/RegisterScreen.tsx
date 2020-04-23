@@ -5,6 +5,12 @@ const RegisterScreen = () => {
   return (
     <View>
       <Text>RegisterScreen</Text>
+      <CustomButton
+        title="Login"
+        onPress={() => {
+          props.navigation.navigate({ routeName: "Tabs" });
+        }}
+      />
     </View>
   );
 };
